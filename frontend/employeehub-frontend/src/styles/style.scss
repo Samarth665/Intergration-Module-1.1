@@ -1,0 +1,111 @@
+:root {
+    --color-primary: #476eae;
+    --color-secondary: #19186b;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+#login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/login-bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+
+    #login-card {
+        width: calc((100% / 3) - (2 * 1em / 3));
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em;
+        border-radius: 2em;
+
+        .logo {
+            img {
+                width: 6em;
+                margin-bottom: 0.8em;
+            }
+        }
+
+        .custom-heading {
+            color: var(--color-primary);
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                width: calc(100% - 2.5em);
+                border: 1px solid #858585;
+                border-radius: 0.8em;
+                margin: 0;
+                margin-bottom: 0.8em;
+                padding: 0.8em 1.6em;
+                font-size: 1em;
+                box-sizing: border-box;
+            }
+
+            input::placeholder {
+                letter-spacing: 1px;
+            }
+
+            a {
+                color: var(--color-primary);
+                margin-bottom: 1.2em;
+            }
+
+            button {
+                cursor: pointer;
+                width: calc(100% - 2.5em);
+                color: #eff3ff;
+                background-color: var(--color-primary);
+                border-radius: 0.8em;
+                margin: 0;
+                margin-bottom: 0.8em;
+                padding: 0.8em 1.6em;
+                letter-spacing: 2px;
+                font-size: 1em;
+                transition: all 0.15s ease-in-out;
+                box-sizing: border-box;
+            }
+
+            .button-primary {
+                color: #eff3ff !important;
+                background: var(--color-primary) !important;
+                border: 1px solid var(--color-primary) !important;
+            }
+
+            .button-primary:hover {
+                color: var(--color-primary) !important;
+                background: transparent !important;
+            }
+
+            p {
+                a {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
